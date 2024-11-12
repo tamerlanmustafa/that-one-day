@@ -1,8 +1,19 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ThatOneDay - A historical exploration app
 
-Currently, two official plugins are available:
+This app highlights stories and events tied to dates in history.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Screenshots
+
+![App Screenshot](https://cdn-icons-png.freepik.com/256/16629/16629952.png?ga=GA1.1.1166205419.1721275017&semt=ais_hybrid)
+## ThatOneDay
+
+
+## Acknowledgements
+
+ - [React JS](https://react.dev/)
+
+
+
+
