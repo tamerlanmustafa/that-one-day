@@ -14,6 +14,13 @@ As a user, I want to view notable historical events that happened on the selecte
 
 As a user, I want to see what movie was top at the box office on the chosen date, so that I can enjoy a nostalgic look at the most popular films from that time.
 
+## MVP Features
+- Built by React
+- Uses 3rd party CSS library (SASS or Tailwind)
+- Consumes Data from 2 APIs (Wheather API, Historic Data API)
+- No secret keys
+
+
 
 ## ERD
 
