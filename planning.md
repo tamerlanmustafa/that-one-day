@@ -2,7 +2,7 @@
 
 Create an app that lets user pick a random date in the past and renders major historic events and wheather for that date
 
-
+    
 
 ## API
 
