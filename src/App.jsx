@@ -1,12 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Home from './components/home/Home'
+import NavBar from "./components/navbar/Navbar";
+import { Route, Routes } from 'react-router-dom';
+
+
 
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <NavBar/>
+      <Routes>
+        {/* add props to home */}
+        <Route path={"/"} element={ <Home/> } />
+      </Routes>
     </>
   )
 }

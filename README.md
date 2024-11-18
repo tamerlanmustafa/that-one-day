@@ -14,6 +14,7 @@ This app highlights stories and events tied to dates in history.
 ## Deployment
 
 - soon on Netlify
+
 ## Technologies Used
 
 - React
