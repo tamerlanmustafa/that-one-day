@@ -1,12 +1,18 @@
 import { useState } from "react"
 import './Hero.scss'
 
-const Hero = () => {
+const Hero = ({ onDateChange }) => {
+    const [year, setYear] = useState('')
+    const handleChange = (e) => {
+        const selectedDate = e.target.value;
+        setYear(selectedDate); 
+        onDateChange(selectedDate); 
+    }
     return (
         <>
             <main>
                 
-                <div>
+                <div> 
                     <h2>Explore one day in the past!</h2>
                     <p>Select a date from the calendar</p>
                 </div>
@@ -15,7 +21,8 @@ const Hero = () => {
                 <section>
                     
                     <form>
-                        
+                        <label htmlFor="year">Choose a date : </label>
+                        <input type="date" value={year} onChange={handleChange}/>
 
                     </form>
                     
