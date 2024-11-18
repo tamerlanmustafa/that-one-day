@@ -52,13 +52,10 @@ const Home =    () => {
         }
        
     },[date])
-        
-
-  
-    
+       
 
     return (<>
-        <Hero  onDateChange={setDate} />
+        <Hero data={data}  onDateChange={setDate} />
     </>)
 }
 
