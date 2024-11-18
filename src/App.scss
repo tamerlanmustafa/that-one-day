@@ -1,0 +1,19 @@
+@import '/src/styles/variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primary-font;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+  }
+  
+  
+body {
+    margin: 0;
+    padding: 1rem 1.3rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: $primary-color;
+}

@@ -1,7 +1,8 @@
 import Home from './components/home/Home'
 import NavBar from "./components/navbar/Navbar";
 import { Route, Routes } from 'react-router-dom';
-
+import './App.scss'
+import './styles/variables.scss'
 
 
 function App() {
@@ -17,3 +18,4 @@ function App() {
 }
 
 export default App
+ 
