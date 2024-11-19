@@ -7,7 +7,7 @@ const Hero = ({ onDateChange, data }) => {
     const [description, setDescription] = useState('');
     const [event, setEvent] = useState(null);
 
-
+ 
     const handleChange = (e) => {
         const selectedDate = e.target.value;
         setYear(selectedDate); 
