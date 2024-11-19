@@ -17,3 +17,10 @@ body {
     color: $text-color;
     background-color: $primary-color;
 }
+
+ul {
+  list-style-type: none;
+  padding: 0; 
+  margin: 0;  
+}
+

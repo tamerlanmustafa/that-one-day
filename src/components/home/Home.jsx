@@ -6,41 +6,47 @@ import Hero from "../Hero/Hero"
 const Home =    () => {
     const [data, setData] = useState(null)
     const [date, setDate] = useState("");
+    
+    // wikipedia
+    const fetchData = async () => {
+       
+    }
+    fetchData()
 
+    //////////////
     useEffect(() => {
         if (date) {
-            console.log("Selected date from Hero:", date);
         
             const API_KEY1 = import.meta.env.VITE_API_KEY_WEATHER
-            const API_KEY2 = import.meta.env.VITE_API_KEY_HISTORIC_EVENT
+            const API_Authorization = import.meta.env.VITE_API_WIKI_AUTHORIZATION
             const [year, month, day] = date.split('-')
+
 
 
             const apiUrl1 = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Arlington,VA/${year}-${month}-${day}T13:00:00?key=${API_KEY1}&include=current `
 
-            const apiUrl2 = `https://api.api-ninjas.com/v1/historicalevents?year=${year}&month=${month}&day=${day}`
+            const apiUrl2 = `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/${month}/${day}`
 
             const optionsApi2 = {
-                method: 'GET',
                 headers: {
-                    'X-Api-Key': `${API_KEY2}`
+                    'Authorization': API_Authorization,
+                    'Api-User-Agent': 'ThatOneDay'
                 }
             }
         
             const handleRequests = async () => {
                 try {
-                    const responses = await Promise.all([
-                        fetch(apiUrl1),
-                        fetch(apiUrl2, optionsApi2)
-                    ])
-                    const result = []
-                    for (let res of responses) {
-                        const resData = await res.json()
-                        result.push(resData)
-                    }
+                    const responseWeatherApi = await fetch(apiUrl1)
+                    const resWeatherData = await responseWeatherApi.json()
 
+                    const responseWikiApi = await fetch(apiUrl2, optionsApi2)
+                    const resWikiData = await responseWikiApi.json()
+                    
+                    const result = []
+                    result.push( resWeatherData, resWikiData)
+ 
                     setData(result)
-                    console.log(result)
+                   
 
                 } catch (err) {
                     console.log(err)
@@ -52,13 +58,10 @@ const Home =    () => {
         }
        
     },[date])
-        
-
-  
-    
+       
 
     return (<>
-        <Hero  onDateChange={setDate} />
+        <Hero data={data}  onDateChange={setDate} />
     </>)
 }
 

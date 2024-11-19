@@ -8,3 +8,45 @@ main {
     align-items: center;
     gap: 2rem;
 }
+
+.that-day {
+    padding: 1rem;
+    width:350px ;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.extra-details {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid black;
+    border-radius: 12px;
+   
+}
+
+.extra-details > * {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    ul {
+        margin-top: 40px;
+    }
+} 
+
+input {
+    cursor: pointer;
+    width: 100%;              
+    padding: 0.5rem;          
+    font-size: 1rem;   
+    font-weight: bold;     
+    border:none; 
+    border-radius: 8px;      
+    background-color: $fourth-color;
+    color: white;
+  }
+
+  
