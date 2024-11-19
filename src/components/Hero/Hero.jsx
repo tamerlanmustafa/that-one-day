@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import './Hero.scss'
 
+const Hero = ({ onDateChange, data }) => {
 const Hero = ({ onDateChange, data }) => {
     const [year, setYear] = useState('')
     const [temp, setTemp] = useState(null);
