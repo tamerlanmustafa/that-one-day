@@ -4,38 +4,32 @@ import './Hero.scss'
 
 const Hero = ({ onDateChange, data }) => {
     const [year, setYear] = useState('')
-
-    // const [event, setEvent] = useState(null);
-    // const [selected, setSelected] = useState(null);
-    // const [birth, setBirth] = useState(null);
-    // const [holiday, setHoliday] = useState(null);
-
     const [apiData, setApiData] = useState({
         event: '',
         selected: '',
         birth: '',
+        death: '',
         holiday: '',
     })
-
 
     const handleChange = (e) => {
         const selectedDate = e.target.value;
         setYear(selectedDate); 
         onDateChange(selectedDate); 
-    }
-    
+    }    
 
     useEffect(() => {
         if (data && data.length > 0) {
             setApiData((prevState) => ({
                 ...prevState,
-                event: data[0]?.events?.[0]?.text || 'No event found',
-                selected: data[0]?.selected?.[0]?.text || 'No selected item found',
+                event: data[0]?.events?.[9]?.text || 'No event found',
+                selected: data[0]?.selected?.[5]?.text || 'No selected item found',
                 birth: data[0]?.births?.[0]?.text || 'No births found',
+                death: data[0]?.deaths?.[0]?.text || 'No deaths found',
                 holiday: data[0]?.holidays?.[0]?.text || 'No holidays found',
             }));
         } else {
-            
+
             setApiData({
                 event: 'No event found',
                 selected: 'No selected item found',
@@ -59,10 +53,8 @@ const Hero = ({ onDateChange, data }) => {
                     <form>
                         <label htmlFor="year">Choose a date : </label>
                         <input type="date" value={year} onChange={handleChange}/>
-
                     </form>  
-                </div>                    
-                    
+                </div>
 
                 <div className="that-day">
                     <div>
@@ -84,18 +76,19 @@ const Hero = ({ onDateChange, data }) => {
                             </li>
                             <hr />
                             <li>
+                                <h4>Who died: </h4>
+                                {apiData.death ? apiData.death : 'error'}
+                            </li>
+                            <hr />
+                            <li>
                                 <h4>Holiday:</h4>
                                 {apiData.holiday ? apiData.holiday : 'error'}
                             </li>
-                        </ul>
-                        
+                        </ul>                        
                     </div>
-
                 </div>
                 
             </main>
-            
-
         </>
     )
 
