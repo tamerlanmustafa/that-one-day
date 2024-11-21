@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+
+.about {
+    height:100vh;
+    padding: 150px 0;
+
+    p {
+        text-align:justify;
+    }
+
+    a {
+        color: black;
+    }
+}

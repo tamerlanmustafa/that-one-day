@@ -2,8 +2,48 @@
 
 
 .navbar {
-    h1 {
+    height: 50px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        font-size: 1.5rem;
+        font-weight: bolder;
         color: $fourth-color; 
         text-decoration:underline;
     }
+
+    .bars{        
+        z-index: 1;
+        span {
+            display: block;
+            height: 4px;
+            width: 32px;
+            margin: 2px;
+            background-color: $fourth-color;
+            border-radius: 2px;
+        }
+    }
+}
+
+
+.open {
+    #bar1 {
+        transform: rotate(45deg);
+        transform-origin:10px 4px;
+    }
+    #bar2 {
+        opacity: 0;
+        transform: translate(10%);
+    }
+    #bar3 {
+        transform: rotate(-45deg);
+        transform-origin:7px -1px;
+    }
+}
+
+.hide-for-desktop {
+    display: none;
 }
