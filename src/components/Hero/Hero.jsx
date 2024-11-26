@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import './Hero.scss'
-import ImageGenerator from "../ImageGeneration/ImageGenerator"
 
 const Hero = ({ onDateChange, data }) => {
     const [year, setYear] = useState('')
@@ -41,7 +40,6 @@ const Hero = ({ onDateChange, data }) => {
  
     return (
         <>
-            {/* <ImageGenerator props={apiData } /> */}
             <main>
                 
                 <div> 
