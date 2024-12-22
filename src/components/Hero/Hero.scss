@@ -50,3 +50,46 @@ input {
   }
 
   
+//   ::-webkit-datetime-edit
+//   ::-webkit-datetime-edit-fields-wrapper
+//   ::-webkit-datetime-edit-text
+  
+//   ::-webkit-datetime-edit-year-field
+//   ::-webkit-datetime-edit-month-field
+//   ::-webkit-datetime-edit-week-field
+//   ::-webkit-datetime-edit-day-field
+//   ::-webkit-datetime-edit-hour-field
+//   ::-webkit-datetime-edit-minute-field
+//   ::-webkit-datetime-edit-second-field
+//   ::-webkit-datetime-edit-millisecond-field
+//   ::-webkit-datetime-edit-ampm-field
+  
+//   ::-webkit-inner-spin-button
+//   ::-webkit-calendar-picker-indicator {}
+
+/* Target the input date field styles */
+input[type="date"] {
+    appearance: none; /* Remove default browser styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Hide the year part of the date picker */
+  input[type="date"]::-webkit-datetime-edit-year-field {
+    display: none;
+  }
+  
+  /* Hide unnecessary separators */
+  input[type="date"]::-webkit-datetime-edit-text {
+    color: white; /* Hide separator dashes */
+  }
+  
+  input[type="date"]::-webkit-datetime-edit-month-field,
+  input[type="date"]::-webkit-datetime-edit-day-field {
+    color: rgb(255, 255, 255); /* Keep day and month visible */
+  }
+  
