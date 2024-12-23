@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 main {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,10 +10,20 @@ main {
 }
 
 .that-day {
+    height: 600px;
     padding: 1rem;
     width:350px ;
     border: 1px solid black;
     border-radius: 12px;
+}
+.that-day__content {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+
 }
 
 .extra-details {
@@ -39,7 +49,7 @@ main {
 
 input {
     cursor: pointer;
-    width: 100%;              
+    width: 30%;              
     padding: 0.5rem;          
     font-size: 1rem;   
     font-weight: bold;     
@@ -49,27 +59,10 @@ input {
     color: white;
   }
 
-  
-//   ::-webkit-datetime-edit
-//   ::-webkit-datetime-edit-fields-wrapper
-//   ::-webkit-datetime-edit-text
-  
-//   ::-webkit-datetime-edit-year-field
-//   ::-webkit-datetime-edit-month-field
-//   ::-webkit-datetime-edit-week-field
-//   ::-webkit-datetime-edit-day-field
-//   ::-webkit-datetime-edit-hour-field
-//   ::-webkit-datetime-edit-minute-field
-//   ::-webkit-datetime-edit-second-field
-//   ::-webkit-datetime-edit-millisecond-field
-//   ::-webkit-datetime-edit-ampm-field
-  
-//   ::-webkit-inner-spin-button
-//   ::-webkit-calendar-picker-indicator {}
 
-/* Target the input date field styles */
+
 input[type="date"] {
-    appearance: none; /* Remove default browser styling */
+    appearance: none; 
     -webkit-appearance: none;
     -moz-appearance: none;
     padding: 5px;
@@ -78,18 +71,28 @@ input[type="date"] {
     border-radius: 4px;
   }
   
-  /* Hide the year part of the date picker */
   input[type="date"]::-webkit-datetime-edit-year-field {
     display: none;
   }
   
-  /* Hide unnecessary separators */
+  input[type="date"]::-webkit-datetime-edit-month-field {
+    border-right: 2px solid white;
+    padding-right: 8px;
+    
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: $primary-color;
+    border-radius: 50%;
+    padding: 5px;
+}
+  
+  
   input[type="date"]::-webkit-datetime-edit-text {
-    color: white; /* Hide separator dashes */
+    color: rgba(135, 5, 5, 0); 
   }
   
   input[type="date"]::-webkit-datetime-edit-month-field,
   input[type="date"]::-webkit-datetime-edit-day-field {
-    color: rgb(255, 255, 255); /* Keep day and month visible */
+    color: rgb(255, 255, 255); 
   }
   

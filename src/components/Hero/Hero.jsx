@@ -10,6 +10,7 @@ const Hero = ({ onDateChange, data }) => {
         death: '',
         holiday: '',
     });
+    const [formattedDate, setFormattedDate] = useState('');
 
     const getTodayDate = () => {
         const today = new Date();
@@ -23,12 +24,18 @@ const Hero = ({ onDateChange, data }) => {
         const today = getTodayDate();
         setYear(today);
         onDateChange(today);
+        const [_, month, day] = today.split('-');
+        const monthName = new Date(2000, parseInt(month, 10) - 1).toLocaleString('default', { month: 'long' });
+        setFormattedDate(`${monthName} ${parseInt(day, 10)}`);
     }, [onDateChange]);
 
     const handleChange = (e) => {
         const selectedDate = e.target.value;
         setYear(selectedDate);
         onDateChange(selectedDate);
+        const [_, month, day] = selectedDate.split('-');
+        const monthName = new Date(2000, parseInt(month, 10) - 1).toLocaleString('default', { month: 'long' });
+        setFormattedDate(`${monthName} ${parseInt(day, 10)}`);
     };
 
     useEffect(() => {
@@ -57,12 +64,12 @@ const Hero = ({ onDateChange, data }) => {
             <main>
                 <div>
                     <h2>Explore one day in the past!</h2>
-                    <p>Select a date from the calendar</p>
+                    <p>Select a day and a month from the calendar</p>
                 </div>
 
                 <div>
                     <form>
-                        <label htmlFor="year">Choose a date : </label>
+                        <label htmlFor="year">Choose a date(Month and Day ONLY): </label>
                         <input
                             type="date"
                             id="year"
@@ -73,8 +80,8 @@ const Hero = ({ onDateChange, data }) => {
                 </div>
 
                 <div className="that-day">
-                    <div>
-                        <h3>On this day:</h3>
+                    <div className="that-day__content">
+                        <h3>Key events on <strong>{formattedDate}</strong>:</h3>
                         <ul>
                             <li>
                                 <h4>Event: </h4>
