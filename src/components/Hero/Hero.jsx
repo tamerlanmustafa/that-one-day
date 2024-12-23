@@ -117,13 +117,13 @@ const Hero = ({ onDateChange, data }) => {
                             <h3>Key events on <strong>{formattedDate}</strong>:</h3>
                             <ul>
                                 <li>
-                                    <h4>Event: </h4>
-                                    {apiData.event || 'error'}
+                                    <h4>Selected: </h4>
+                                    {apiData.selected || 'error'}
                                 </li>
                                 <hr />
                                 <li>
-                                    <h4>Selected: </h4>
-                                    {apiData.selected || 'error'}
+                                    <h4>Random: </h4>
+                                    {apiData.event || 'error'}
                                 </li>
                                 <hr />
                                 <li>
