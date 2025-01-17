@@ -7,7 +7,7 @@ This app highlights stories and events tied to dates in history.
 
 
 
-[![FilmFanatics](https://img.shields.io/badge/filmfanatics-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://thatoneday.netlify.app/)
+[![ThatOneDay](https://img.shields.io/badge/filmfanatics-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://thatoneday.netlify.app/)
 ## Technologies Used
 
 1. Express
