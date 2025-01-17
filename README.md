@@ -1,36 +1,40 @@
-
 # ThatOneDay - A historical exploration app
 
 This app highlights stories and events tied to dates in history.
 
 
-
-
-![App Screenshot](https://cdn-icons-png.freepik.com/256/16629/16629952.png?ga=GA1.1.1166205419.1721275017&semt=ais_hybrid)
-
-
-
-
 ## Deployment
 
-- soon on Netlify
 
+
+[![FilmFanatics](https://img.shields.io/badge/filmfanatics-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://thatoneday.netlify.app/)
 ## Technologies Used
 
-- React
-- Styling - TBD
+1. Express
+1. Mongoose
+1. MongoDB
+1. EJS
+1. HTML
+1. JavaScript
+1. Node
+1. CSS
+1. Heroku
+1. Tailwind Css
 
 
 
 
 
-## API Reference
-API Sources:
-- https://www.visualcrossing.com/weather-api
-- https://www.api-ninjas.com/api/historicalevents 
+## Acknowledgements
+
+ - https://developer.mozilla.org/en-US/ 
+ - https://chatgpt.com/ 
+ - https://www.geeksforgeeks.org/ 
+ - https://www.mongodb.com/ 
+ 
 
 
 ## Next Steps
 
-- Add Wikipedia API/Google API for that date
-- Build a backend database for users to upload/delete/edit images to a specific date
+- Add Authentication to validate users/credentials
+- Add like/dislike button functionality
